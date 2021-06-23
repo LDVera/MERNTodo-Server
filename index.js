@@ -4,13 +4,6 @@ const cors = require('cors')
 
 // create server
 const app = express();
-
-// conect to db
-connectDB()
-
-// enable cors
-app.use(cors())
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", '*');
   res.header("Access-Control-Allow-Credentials", true);
@@ -18,6 +11,14 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
   next();
 });
+
+// conect to db
+connectDB()
+
+// enable cors
+app.use(cors())
+
+
 
 // hability express.json 
 app.use(express.json({ extended: true }))
