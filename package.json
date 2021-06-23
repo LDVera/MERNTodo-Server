@@ -4,7 +4,7 @@
   "description": "MERN API to MERN TASK PROJECT",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node index.js",
     "dev": "nodemon ."
   },
   "author": "Luis Diego Vera Alvarez",
